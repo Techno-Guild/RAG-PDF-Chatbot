@@ -27,6 +27,13 @@ Welcome to the **RAG Document Chatbot**! This application allows users to upload
 | `/upload`            | Upload PDF documents                              |
 | `/ask_question`      | Interact with the chatbot by asking questions     |
 
+## Application Workflow Diagram
+
+The following diagram illustrates the workflow of the RAG Document Chatbot application:
+
+![Application Workflow](assets/design.png)
+
+
 ## Running Instructions
 To run this application locally, follow these steps:
 
