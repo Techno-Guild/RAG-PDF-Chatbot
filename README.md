@@ -76,7 +76,8 @@ flask db upgrade
 
 ## Demo
 
-[! Watch the DEMO](./assets/RAG-Chatbot-Demo.webm)
+[RAG-Chatbot-Demo.webm](https://github.com/user-attachments/assets/c7e99e2b-60e1-4c90-a948-d3d90a43393e)
+
 
 ## Contributing
 If you find this application useful, feel free to contribute or give it a ⭐ on GitHub!
