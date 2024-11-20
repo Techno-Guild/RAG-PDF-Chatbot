@@ -1,6 +1,6 @@
 # RAG Document Chatbot
 
-Welcome to the **RAG Document Chatbot**! This application allows users to upload PDF documents and interact with them through a chatbot interface using advanced language models and vector embeddings.
+Welcome to the **RAG Document Chatbot**! This application allows users to upload PDF documents and interact with them through a chatbot interface using advanced language models and vector embeddings. Must use 4 PDFs at least, during a session.
 
 ## Key Features
 - **User Authentication**: Signup, login, and logout functionality with password hashing and session management.
