@@ -74,5 +74,12 @@ flask db migrate
 flask db upgrade
 ```
 
+## Demo
+
+<video src="./assets/RAG-Chatbot-Demo.webm" alt="Demo" autoplay loop></video> 
+
 ## Contributing
 If you find this application useful, feel free to contribute or give it a ⭐ on GitHub!
+
+
+
