@@ -1,45 +1,39 @@
-# Flask Starter Template
+# RAG Document Chatbot
 
-Welcome to the **Flask Starter Template**! This template provides a solid starting point for building a Flask web application with authentication, database integration, templating, and minimal styling using [Matcha CSS](https://matcha.mizu.sh/).
+Welcome to the **RAG Document Chatbot**! This application allows users to upload PDF documents and interact with them through a chatbot interface using advanced language models and vector embeddings.
 
-## What is This Template?
-
-This template includes basic features that every Flask developer needs when starting a new project. It offers:
-- Authentication system (signup, login, logout)
-- Database integration with SQLAlchemy
-- Templating with Jinja2
-- Minimal styling using Matcha CSS
-- Protected routes accessible only after login
-
-You can quickly build upon this structure and add more features as needed!
+## Key Features
+- **User Authentication**: Signup, login, and logout functionality with password hashing and session management.
+- **Document Upload**: Users can upload multiple PDF documents for interaction.
+- **Chatbot Interaction**: Ask questions related to the uploaded documents, receiving context-based answers.
+- **Responsive UI**: A user-friendly interface with a sidebar for displaying uploaded files.
 
 ## Technologies Used
-
 - **Flask**: A lightweight WSGI web application framework in Python.
 - **SQLAlchemy**: SQL toolkit and Object-Relational Mapping (ORM) for Python.
 - **Flask-Migrate**: Extension that handles SQLAlchemy database migrations via Alembic.
+- **Langchain**: For building the question-answering system.
+- **FAISS**: For efficient vector-based document retrieval.
 - **Matcha CSS**: A Drop-in semantic styling library in pure CSS. [Learn more about Matcha CSS here](https://matcha.mizu.sh/).
 
-For a detailed breakdown of this template, check out [this video](https://youtu.be/oQ5UfJqW5Jo) by NeuralNine.
-
 ## Routes
-
-| Route        | Description                               |
-|--------------|-------------------------------------------|
-| `/`          | Landing page                              |
-| `/signup`    | Sign up for a new account                 |
-| `/login`     | Log into an existing account              |
-| `/logout`    | Log out of the current session            |
-| `/protected` | A protected page accessible after login   |
+| Route                | Description                                       |
+|----------------------|---------------------------------------------------|
+| `/`                  | Home page                                        |
+| `/signup`            | Sign up for a new account                         |
+| `/login`             | Log into an existing account                      |
+| `/logout`            | Log out of the current session                    |
+| `/protected`         | A protected page accessible after login           |
+| `/upload`            | Upload PDF documents                              |
+| `/ask_question`      | Interact with the chatbot by asking questions     |
 
 ## Running Instructions
-
-To run this template locally, follow these steps:
+To run this application locally, follow these steps:
 
 1. **Clone the Repository**
    ```bash
    git clone <repository_url>
-   cd flask_template
+   cd RAG_Project
    ```
 
 2. **Create and Activate a Virtual Environment**
@@ -54,7 +48,7 @@ To run this template locally, follow these steps:
    ```
 
 4. **Set Up the Database**
-   Initialize, migrate, and upgrade the database.
+   Initialize, migrate, and upgrade the database:
    ```bash
    flask db init
    flask db migrate
@@ -67,14 +61,11 @@ To run this template locally, follow these steps:
    ```
 
 ## Database Migrations
-
 Any time you make changes to the models, ensure you follow these steps to migrate and apply changes to the database:
-
 ```bash
 flask db migrate
 flask db upgrade
 ```
 
 ## Contributing
-
-If you find this template useful, give it a ⭐ on GitHub!
+If you find this application useful, feel free to contribute or give it a ⭐ on GitHub!

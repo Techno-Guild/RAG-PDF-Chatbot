@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <h1>Protected Page</h1>
+<div class="container">
+    <h1>Document Interaction Portal</h1>
+    <div class="upload-section">
+        <h2>Upload PDF Documents</h2>
+        <form action="{{ url_for('upload_files') }}" method="post" enctype="multipart/form-data">
+            <label for="pdf_files">Choose PDF files:</label>
+            <input type="file" id="pdf_files" name="pdf_files" multiple accept="application/pdf">
+            <button type="submit">Upload</button>
+        </form>
+        <p class="instruction">You can upload multiple PDF documents to interact with.</p>
+    </div>
 </div>
 {% endblock %}

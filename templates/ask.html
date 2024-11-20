@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+    {% if uploaded_files %}
+        {% for file in uploaded_files %}
+        <li>{{ file }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No files uploaded</li>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="chatbot-section">
+    <h1>Ask a Question</h1>
+    <form action="{{ url_for('ask_question') }}" method="post">
+        <label for="question">Enter your question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if answer %}
+        <div class="answer-section">
+            <h2>Answer:</h2>
+            <p>{{ answer }}</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

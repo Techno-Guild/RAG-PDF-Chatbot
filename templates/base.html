@@ -4,23 +4,56 @@
     <meta charset="UTF-8">
     <title>📖 Tale Craft</title>
     <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #7d2626;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 8px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <menu>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            {% if current_user.is_authenticated %}
-                <li><a href="{{ url_for('logout') }}">Logout</a></li>
-            {% else %}
-                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-            {% endif %} 
-        </menu>
-    </header>
+    <div class="sidebar">
+        <h3>Uploaded Files</h3>
+        <ul>
+            {% block sidebar %}
+            {% endblock %}
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <menu>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                {% endif %} 
+            </menu>
+        </header>
 
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
 </body>
 </html>
