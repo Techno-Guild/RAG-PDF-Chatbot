@@ -2,8 +2,8 @@
 
 {% block content %}
     <header>
-        <h1>Welcome to Flask Starter Template</h1>
-        <p>A minimal template with authentication, database integration, and Matcha CSS for styling.</p>
+        <h1>Tale-Craft RAG-PDF Chatbot</h1>
+        <p>A minimal RAG PDF chatbot web application with authentication, database integration, and Matcha CSS for styling.</p>
     </header>
 
     <main>
@@ -20,7 +20,7 @@
         <section>
             <h2>Access Protected Route</h2>
             {% if not current_user.is_authenticated %}
-                <button disabled>Protected Page (Login Required)</button>
+                <button disabled>RAG Chatbot (Login Required)</button>
                 <p><a href="/login">Login</a> to enable the button.</p>
             {% else %}
                 <a href="/protected"><button>Go to Protected Page</button></a>
@@ -29,6 +29,6 @@
     </main>
 
     <footer>
-        <p>© 2024 Flask Starter Template. All rights reserved.</p>
+        <p>© 2024 Tale Craft. All rights reserved.</p>
     </footer>
 {% endblock %}
