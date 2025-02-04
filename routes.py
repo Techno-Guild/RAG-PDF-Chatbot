@@ -21,12 +21,10 @@ load_dotenv()
 logging.basicConfig(level=logging.ERROR)
 
 groq_api_key = os.getenv('GROQ_API_KEY')
-google_api_key = os.getenv("GOOGLE_API_KEY")
 
-if google_api_key is None:
-    raise ValueError("GOOGLE_API_KEY environment variable is not set.")
-
-os.environ["GOOGLE_API_KEY"] = google_api_key
+if not groq_api_key:
+    print("GROQ_API_KEY environment variable is not set.")
+    exit(1)
 
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="Llama3-8b-8192")
 
